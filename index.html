@@ -297,7 +297,7 @@
                 const response = await fetch('http://dolibarr.craftproject.fr/api/index.php/status', {
                     method: 'GET',
                     headers: {
-                        'DOLAPIKEY': 'd85v2y3t',
+                        'HTTP_DOLAPIKEY': 'd85v2y3t',
                         'Accept': 'application/json'
                     },
                     signal: controller.signal
