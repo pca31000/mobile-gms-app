@@ -294,10 +294,9 @@
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => controller.abort(), 8000);
                 
-                const response = await fetch('http://dolibarr.craftproject.fr/api/index.php/status', {
+                const response = await fetch('http://dolibarr.craftproject.fr/api/index.php/status?DOLAPIKEY=d85v2y3t', {
                     method: 'GET',
                     headers: {
-                        'HTTP_DOLAPIKEY': 'd85v2y3t',
                         'Accept': 'application/json'
                     },
                     signal: controller.signal
