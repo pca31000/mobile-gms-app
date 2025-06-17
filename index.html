@@ -294,7 +294,7 @@
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => controller.abort(), 8000);
                 
-                const response = await fetch('http://dolibarr.craftproject.fr/api/index.php/login?login=api_user&password=d85v2y3t', {
+                const response = await fetch('https://cors-anywhere.herokuapp.com/http://dolibarr.craftproject.fr/api/index.php/login?login=api_user&password=d85v2y3t', {
     method: 'GET',
     headers: {
         'Authorization': 'Basic ' + btoa('neipa31:neipa31'),
