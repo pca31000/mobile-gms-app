@@ -295,11 +295,12 @@
                 const timeoutId = setTimeout(() => controller.abort(), 8000);
                 
                 const response = await fetch('http://dolibarr.craftproject.fr/api/index.php/status?DOLAPIKEY=d85v2y3t', {
-                    method: 'GET',
-                    headers: {
-                        'Accept': 'application/json'
-                    },
-                    signal: controller.signal
+                method: 'GET',
+                headers: {
+                'Authorization': 'Basic ' + btoa('neipa31:neipa31'),
+                'Accept': 'application/json'
+                },
+                signal: controller.signal
                 });
                 
                 clearTimeout(timeoutId);
